@@ -1,0 +1,130 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2021-11-11T23:47:05Z",
+        "groups": [
+            {
+                "uuid": "ad1b7a3a9a4041f387ace2791e299102",
+                "name": "Apple Store"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "26294c8c90764e0b8ce454ea93ea3aba",
+                "template": "Apple Store Discovery",
+                "name": "Apple Store Discovery",
+                "groups": [
+                    {
+                        "name": "Apple Store"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "f458afac122542b6972bd173e384888e",
+                        "name": "Descoberta App Apple Store",
+                        "type": "EXTERNAL",
+                        "key": "DiscoveryAppStore.py",
+                        "delay": "5m",
+                        "item_prototypes": [
+                            {
+                                "uuid": "ed4185cd1d2b4eae884ec319c21a3f9c",
+                                "name": "Quantidade de Avaliac\u00f5es : {#APP_LABEL}",
+                                "type": "EXTERNAL",
+                                "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Avaliacoes\"]",
+                                "delay": "5m",
+                                "tags": [
+                                    {
+                                        "tag": "Mobile",
+                                        "value": "Apple Store"
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "6810c27916b34235b709e01f3fc0a6d4",
+                                "name": "Nota da Aplica\u00e7\u00e3o : {#APP_LABEL}",
+                                "type": "EXTERNAL",
+                                "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Nota\"]",
+                                "delay": "5m",
+                                "value_type": "FLOAT",
+                                "tags": [
+                                    {
+                                        "tag": "Mobile",
+                                        "value": "Apple Store"
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "ba0eb59a35c94c5f8dd4e5dd766de26c",
+                                "name": "Vers\u00e3o da Aplica\u00e7\u00e3o : {#APP_LABEL}",
+                                "type": "EXTERNAL",
+                                "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Versao\"]",
+                                "delay": "5m",
+                                "history": "7d",
+                                "trends": "0",
+                                "value_type": "TEXT",
+                                "tags": [
+                                    {
+                                        "tag": "Mobile",
+                                        "value": "Apple Store"
+                                    }
+                                ]
+                            }
+                        ],
+                        "graph_prototypes": [
+                            {
+                                "uuid": "fbefb88437b24463acbb82ea27ce6be2",
+                                "name": "Nota da Aplica\u00e7\u00e3o : {#APP_LABEL}",
+                                "ymin_type_1": "ITEM",
+                                "ymin_item_1": {
+                                    "host": "Apple Store Discovery",
+                                    "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Nota\"]"
+                                },
+                                "ymax_type_1": "ITEM",
+                                "ymax_item_1": {
+                                    "host": "Apple Store Discovery",
+                                    "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Nota\"]"
+                                },
+                                "graph_items": [
+                                    {
+                                        "sortorder": "1",
+                                        "drawtype": "GRADIENT_LINE",
+                                        "color": "FFBF00",
+                                        "item": {
+                                            "host": "Apple Store Discovery",
+                                            "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Nota\"]"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "17a957927583458e9eb8b198980c31aa",
+                                "name": "Quantidade de Avaliac\u00f5es : {#APP_LABEL}",
+                                "ymin_type_1": "ITEM",
+                                "ymin_item_1": {
+                                    "host": "Apple Store Discovery",
+                                    "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Avaliacoes\"]"
+                                },
+                                "ymax_type_1": "ITEM",
+                                "ymax_item_1": {
+                                    "host": "Apple Store Discovery",
+                                    "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Avaliacoes\"]"
+                                },
+                                "graph_items": [
+                                    {
+                                        "sortorder": "1",
+                                        "drawtype": "GRADIENT_LINE",
+                                        "color": "FFBF00",
+                                        "item": {
+                                            "host": "Apple Store Discovery",
+                                            "key": "applestore.py[ {#APP_NOME},{#APP_ID},\"Nota\"]"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

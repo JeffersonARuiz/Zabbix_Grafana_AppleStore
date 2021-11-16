@@ -1,0 +1,34 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2021-11-11T15:17:25Z",
+        "groups": [
+            {
+                "uuid": "ad1b7a3a9a4041f387ace2791e299102",
+                "name": "Apple Store"
+            }
+        ],
+        "hosts": [
+            {
+                "host": "Apple Store",
+                "name": "Apple Store",
+                "templates": [
+                    {
+                        "name": "Apple Store Discovery"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Apple Store"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "interface_ref": "if1"
+                    }
+                ],
+                "inventory_mode": "DISABLED"
+            }
+        ]
+    }
+}
