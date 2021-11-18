@@ -38,7 +38,7 @@ O Arquivo <b>AppleStore.list</b> esta estruturado com quatro parâmetros, separa
   **OBS.:**  *Sempre que você precisar incluir uma nova aplicação na monitoria, é necessário editar o arquivo **Applestore.list** e inserir os parâmetros da aplicação.*
   
   
-# IMPORTANDO OS TEMPLATES NO ZABBIX
+# Importando os Templates no Zabbix
 
 **Passo 01**: Copiar os 3 arquivos ( **applestore.py** | **DiscoveryAppStore.py** | **AppleStore.list**) para o diretório *“externalscripts”* do Zabbix. Esse diretório é variável dependendo da versão do sistema operacional onde o Zabbix foi instalado, no meu caso os arquivos foram copiados para o diretório */usr/lib/zabbix/externalscripts*
 
@@ -52,9 +52,9 @@ O Arquivo <b>AppleStore.list</b> esta estruturado com quatro parâmetros, separa
 
 *Pronto, toda a configuração necessária ja esta executada no Zabbix, aguarde o tempo de 5 minutos que esta parametrizado no Template para que a regra de descoberta execute os scripts e exiba as aplicações que estão parametrizadas no arquivo AppleStore.list.*
 
-# IMPORTANDO OS TEMPLATES NO GRAFANA
+# Importando o Dashboard no Grafana
 
-  **IMPORTANTE**:  Para que o a importação do template funcione, a integração com o Zabbix com o Grafana ja deve ter sido executada. 
+  **IMPORTANTE**:  Para que  a importação do dashboard funcione, a integração com o Zabbix com o Grafana ja deve ter sido executada. 
 
 
   **Passo 01**: Copiar a pasta “AppleStore” que contem todas as imagens dos APPs monitorados para o servidor do Grafana e colar a pasta completa no caminho “grafana\public\img”
